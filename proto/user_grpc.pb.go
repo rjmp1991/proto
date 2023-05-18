@@ -4,7 +4,7 @@
 // - protoc             v4.23.0
 // source: user.proto
 
-package userpb
+package user
 
 import (
 	context "context"

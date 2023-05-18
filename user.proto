@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/rjmp1991/proto;userpb";
+
+message User {
+  string user_id = 1;
+  string user_name = 2;
+}
+
+service Greeter {
+  rpc SayHello(User) returns (User) {}
+}

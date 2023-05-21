@@ -2,13 +2,21 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "github.com/rjmp1991/proto;user";
+option go_package = "github.com/rjmp1991/proto/user";
+
+service UserService {
+  rpc GetUser (UserRequest) returns (UserResponse) {}
+}
 
 message User {
   string user_id = 1;
   string user_name = 2;
 }
 
-service Greeter {
-  rpc SayHello(User) returns (User) {}
+message UserRequest {
+  string user_id = 1;
+}
+
+message UserResponse {
+  User user = 1;
 }
